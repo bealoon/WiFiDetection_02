@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <!--    base color-->
+    <color name="gray_light">#AAAAAA</color>
+    <color name="gray">#EEEEEE</color>
+    <color name="gray_dark">#8E8E8C</color>
+    <color name="red">#FF0000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="blue">#004894</color>
+    <color name="green">#FF00FF00</color>
+    <color name="transparent11">#11000000</color>
+    <color name="transparent22">#55000000</color>
+
+<!--    主题颜色-->
+    <color name="color_primary_bg">#F0F0F0</color>
+    <color name="color_primary">#FFFFFF</color>
+    <color name="color_primary_btn">#FFA500</color>
+    <color name="bg_box">#FFFFFF</color>
+
+
+    <color name="bg_login_pressed">#E53935</color>
+    <color name="bg_login_normal">#FFA500</color>
+
+    <color name="color_success">#42D77D</color>
+    <color name="color_confirm">#3880FF</color>
+    <color name="color_danger">#EB445A</color>
+    <color name="color_cancel">#F4F5F8</color>
+</resources>

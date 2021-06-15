@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_primary_bg"
+    android:keepScreenOn="true"
+    android:orientation="vertical"
+    tools:context=".ui.activities.Main1Activity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_status_height"
+        android:visibility="gone" />
+
+    <include layout="@layout/layout_title_bar_common" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/item_margin_20">
+
+            <TextView
+                style="@style/text_black_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="当前设备" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_list_item"
+                android:gravity="center_vertical"
+                android:minHeight="50dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    style="@style/text_black_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/hint_device_name" />
+
+                <TextView
+                    android:id="@+id/tvDeviceSta"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/item_padding_5"
+                    android:text=""
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvDevice"
+                    style="@style/text_black_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableEnd="@drawable/ic_action_next"
+                    android:drawableRight="@drawable/ic_action_next"
+                    android:gravity="center"
+                    android:text="@string/hint_change_device" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/text_black_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/item_margin_20"
+                android:text="检测结果" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_list_item"
+                android:gravity="center_vertical"
+                android:minHeight="50dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    android:id="@+id/tvHintStatus"
+                    style="@style/text_black_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/hint_result" />
+
+                <TextView
+                    android:id="@+id/tvDetectionResult"
+                    style="@style/text_black_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=" " />
+
+            </LinearLayout>
+
+            <com.ai.wifidetection.ui.customview.barchart.MyBarChart
+                android:id="@+id/barChart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="@dimen/item_margin_10"
+                android:background="@drawable/bg_box"
+                android:padding="@dimen/item_padding_5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_box"
+                android:minHeight="50dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/item_padding_20">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_list_item"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/item_common_height"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_black_16"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/alarm_mode" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switch_alarm_mode"
+                        style="@style/Widget.AppCompat.CompoundButton.Switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/rg_alarm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rb_alarm_endowment"
+                        style="@style/text_black_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:minHeight="@dimen/item_common_height"
+                        android:text="@string/hint_mode_endowment" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rb_alarm_security"
+                        style="@style/text_black_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:minHeight="@dimen/item_common_height"
+                        android:text="@string/hint_mode_security" />
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvNextReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/item_margin_10"
+                android:autoLink="phone"
+                android:drawableRight="@drawable/ic_action_next"
+                android:gravity="right"
+                android:visibility="gone"
+                android:text="点击进入报告"
+                android:textColorLink="@color/blue"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvHintReportHistory"
+                    style="@style/text_black_hint"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/report_history" />
+
+                <TextView
+                    android:id="@+id/tvReportDate"
+                    android:textSize="14sp"
+                    android:textColor="@color/sdl_primary_text_holo_light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableEnd="@drawable/ic_action_date2"
+                    android:drawableRight="@drawable/ic_action_date2"
+                    android:gravity="center"
+                    android:text="2021-06-11" />
+
+            </LinearLayout>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barChartReport"
+                android:background="@drawable/bg_box"
+                android:layout_marginTop="@dimen/item_margin_10"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

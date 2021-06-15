@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="@dimen/item_padding_5"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_lv_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/selector_connect_radio"
+            android:paddingLeft="@dimen/item_padding_5"
+            android:clickable="false"
+            android:focusable="false"
+            android:paddingStart="@dimen/item_padding_5" />
+
+        <TextView
+            android:id="@+id/tv_lv_mac"
+            style="@style/text_black_16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/expand_tab_item_height"
+            android:text="00:00:00:00:00:00" />
+
+        <TextView
+            android:id="@+id/tv_lv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:paddingRight="@dimen/item_padding_5"
+            android:maxWidth="@dimen/dp_180"
+            android:text="@string/app_name"
+            android:paddingEnd="@dimen/item_padding_5" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:paddingHorizontal="@dimen/item_padding_10"
+        android:background="@color/color_primary_bg"/>
+</LinearLayout>

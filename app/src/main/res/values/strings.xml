@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">WiFi感知</string>
+
+    <string name="start_btn_current_link_ap">连接当前路由器</string>
+    <string name="start_btn_scan">扫描二维码</string>
+    <string name="start_btn_input_link_ap">手动绑定路由器</string>
+
+    <string name="filterMAC">0123456789abcdefABCDEF</string>
+    <string name="hint_input_mac">请输入MAC地址</string>
+    <string name="setting">设置</string>
+    <string name="hint_result">当前状态</string>
+    <string name="hint_device_name">设备</string>
+    <string name="hint_change_device">更换设备</string>
+    <string name="hint_mode_security">安防报警-有人活动报警</string>
+    <string name="hint_mode_endowment">养老报警-长时间无人活动报警</string>
+    <string name="alarm_mode">报警模式</string>
+    <string name="report_history">历史报表</string>
+    <string name="hint_select_sta_auto">自动选择设备</string>
+    <string name="hint_select_sta_manual">手动选择设备</string>
+</resources>

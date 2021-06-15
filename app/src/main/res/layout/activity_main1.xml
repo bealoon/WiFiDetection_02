@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:keepScreenOn="true"
+    android:background="@color/color_primary_bg"
+    tools:context=".ui.activities.Main1Activity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_status_height"
+        android:visibility="gone"/>
+
+    <include layout="@layout/layout_title_bar_common"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/item_margin_20"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/text_black_hint"
+            android:text="当前设备"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_list_item"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:minHeight="50dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                style="@style/text_black_hint"
+                android:gravity="center_vertical"
+                android:text="@string/hint_device_name"/>
+
+            <TextView
+                android:id="@+id/tvDevice"
+                style="@style/text_black_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableEnd="@drawable/ic_action_next"
+                android:drawableRight="@drawable/ic_action_next"
+                android:gravity="center"
+                android:text="@string/hint_change_device" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_margin_20"
+            style="@style/text_black_hint"
+            android:text="检测结果"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_list_item"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:minHeight="50dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                style="@style/text_black_hint"
+                android:gravity="center_vertical"
+                android:text="@string/hint_result"/>
+
+            <TextView
+                android:id="@+id/tvDetectionResult"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                style="@style/text_black_16"
+                android:text=" "
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/lineChart"
+            android:layout_marginTop="@dimen/item_margin_10"
+            android:padding="@dimen/item_padding_5"
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_box"
+            android:layout_height="300dp"/>
+    </LinearLayout>
+
+</LinearLayout>

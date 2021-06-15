@@ -1,0 +1,2 @@
+rootProject.name='WiFiDetection_02'
+include ':app'

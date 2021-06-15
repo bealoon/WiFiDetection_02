@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_primary_bg"
+    tools:context=".ui.activities.ReportActivity"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar_common"/>
+
+    <LinearLayout
+        android:id="@+id/llChart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="@dimen/item_margin_5"
+        android:background="@drawable/bg_box"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/text_white_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="实时显示" />
+
+        <com.github.mikephil.charting.charts.CombinedChart
+            android:id="@+id/combinedChart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:minHeight="280dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

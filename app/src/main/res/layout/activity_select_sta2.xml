@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_primary_bg"
+    tools:context=".ui.activities.SelectSta2Activity">
+
+    <include layout="@layout/layout_title_bar_common"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:padding="@dimen/item_margin_20"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/cb_select2_manual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/text_gray_hint"
+            android:button="@drawable/selector_blue_radio"
+            android:text="@string/hint_select_sta_manual"
+            android:paddingLeft="@dimen/item_padding_5"
+            android:paddingStart="@dimen/item_padding_5" />
+
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_marginTop="@dimen/item_margin_10"
+            android:background="@drawable/bg_box"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.scwang.smart.refresh.header.BezierRadarHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridView
+                android:id="@+id/gv_device"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:verticalSpacing="1dp"
+                android:background="@drawable/bg_box"
+                android:numColumns="1"/>
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:padding="@dimen/item_padding_20"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/rb_select2_auto"
+            android:button="@drawable/selector_blue_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/item_padding_5"
+            android:paddingStart="@dimen/item_padding_5"
+            style="@style/text_gray_hint"
+            android:text="@string/hint_select_sta_auto"/>
+
+        <com.skydoves.elasticviews.ElasticButton
+            android:id="@+id/btn_select2_confirm"
+            style="@style/text_white_16"
+            android:layout_marginTop="@dimen/item_margin_30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_confirm"
+            android:text="@string/confirm"/>
+    </LinearLayout>
+</LinearLayout>
